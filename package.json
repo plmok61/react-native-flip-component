@@ -1,11 +1,15 @@
 {
   "name": "react-native-flip-component",
   "version": "1.0.0",
-  "author": "Phil Mok",
   "description": "Double-sided React component that flips 180 degrees",
+  "author": "Phil Mok",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 1"
+    "test": "echo \"Error: No test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plmok61/react-native-flip-component.git"
   },
   "keywords": [
     "react-native",
@@ -20,4 +24,8 @@
     "android"
   ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plmok61/react-native-flip-component/issues"
+  },
+  "homepage": "https://github.com/plmok61/react-native-flip-component#readme"
 }
