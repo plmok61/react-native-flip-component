@@ -20,7 +20,7 @@ class FlipComponent extends Component {
     backPerspective: 1000,
     scaleDuration: 100,
     rotateDuration: 300,
-    containerStyle: { flex: 1 },
+    containerStyles: { flex: 1 },
     frontStyles: null,
     backStyles: null,
   };
@@ -86,7 +86,7 @@ class FlipComponent extends Component {
     const backAnimatedStyle = { rotateY: this.backInterpolate };
     const scaleAnimatedStyle = { scale: this.scaleInterpolate };
     return (
-        <View style={this.props.containerStyle}>
+        <View style={this.props.containerStyles}>
           <Animated.View
             style={[
               {

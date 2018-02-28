@@ -1,5 +1,7 @@
 # react-native-flip-component
 
+More details coming soon...
+
 ```javascript
 import React, { Component } from 'react';
 import FlipComponent from 'react-native-flip-component';
