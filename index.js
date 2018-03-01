@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Animated, Easing, StyleSheet, Text } from 'react-native';
+import { View, Animated, Easing, StyleSheet, Text, ViewPropTypes } from 'react-native';
 
 class FlipComponent extends Component {
   static propTypes = {
@@ -12,6 +12,9 @@ class FlipComponent extends Component {
     backPerspective: PropTypes.number,
     scaleDuration: PropTypes.number,
     rotateDuration: PropTypes.number,
+    containerStyles: ViewPropTypes.style,
+    frontStyles: ViewPropTypes.style,
+    backStyles: ViewPropTypes.style,
   };
 
   static defaultProps = {

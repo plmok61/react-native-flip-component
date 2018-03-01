@@ -1,7 +1,30 @@
 # react-native-flip-component
 
-More details coming soon...
+### Installation
+`npm install react-native-flip-component --save`
 
+### Instructions
+Pass a boolean, front component, and back component as props. The boolean will determine if the front or back component should be displayed.
+
+### Demo
+GIF coming soon...
+
+### Props
+Name | Required? | Description
+---- | ----------|--------
+isFlipped | true | boolean
+frontView | true | Component
+backView | true | Component
+scale | false | defaults to 0.8
+scaleDuration | false | defaults to 100
+frontPerspective | false | defaults to 1000
+backPerspective | false | defaults to 1000
+rotateDuration | false | defaults to 300
+containerStyles | false | defaults to { flex: 1 }
+frontStyles | false | defaults to null
+backStyles | false | defaults to null
+
+### Example
 ```javascript
 import React, { Component } from 'react';
 import FlipComponent from 'react-native-flip-component';
