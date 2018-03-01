@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Animated, Easing, StyleSheet, Text, ViewPropTypes } from 'react-native';
+import { View, Animated, Easing, Text, ViewPropTypes } from 'react-native';
 
 class FlipComponent extends Component {
   static propTypes = {
@@ -23,7 +23,7 @@ class FlipComponent extends Component {
     backPerspective: 1000,
     scaleDuration: 100,
     rotateDuration: 300,
-    containerStyles: { flex: 1 },
+    containerStyles: null,
     frontStyles: null,
     backStyles: null,
   };
@@ -102,6 +102,7 @@ class FlipComponent extends Component {
               },
               this.props.frontStyles,
             ]}
+            pointerEvents={this.props.isFlipped ? 'none' : 'auto'}
           >
             {this.props.frontView}
           </Animated.View>
@@ -118,6 +119,7 @@ class FlipComponent extends Component {
               },
               this.props.backStyles,
             ]}
+            pointerEvents={this.props.isFlipped ? 'auto' : 'none'}
           >
             {this.props.backView}
           </Animated.View>
