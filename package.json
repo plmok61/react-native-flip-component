@@ -1,6 +1,6 @@
 {
   "name": "react-native-flip-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Double-sided React component that flips 180 degrees",
   "author": "Phil Mok",
   "main": "index.js",
