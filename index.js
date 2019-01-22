@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Animated, Easing, Text, ViewPropTypes } from 'react-native';
+import { View, Animated, Easing, ViewPropTypes, Platform } from 'react-native';
 
 class FlipComponent extends Component {
   static propTypes = {
@@ -100,6 +100,13 @@ class FlipComponent extends Component {
                   scaleAnimatedStyle,
                 ],
               },
+              // Fix backfaceVisibility on Android
+              // https://github.com/facebook/react-native/issues/9718
+              Platform.select({
+                android: {
+                  opacity: this.animatedView.interpolate({ inputRange: [0, 0.5, 0.5], outputRange: [1, 1, 0] }),
+                },
+              }),
               this.props.frontStyles,
             ]}
             pointerEvents={this.props.isFlipped ? 'none' : 'auto'}
@@ -117,6 +124,13 @@ class FlipComponent extends Component {
                   scaleAnimatedStyle,
                 ],
               },
+              // Fix backfaceVisibility on Android
+              // https://github.com/facebook/react-native/issues/9718
+              Platform.select({
+                android: {
+                  opacity: this.animatedView.interpolate({ inputRange: [0.5, 0.5, 1], outputRange: [0, 1, 1] }),
+                },
+              }),
               this.props.backStyles,
             ]}
             pointerEvents={this.props.isFlipped ? 'auto' : 'none'}
