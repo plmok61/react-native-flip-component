@@ -63,6 +63,7 @@ class FlipComponent extends Component {
           toValue: 1,
           duration: this.props.scaleDuration,
           easing: Easing.linear,
+          useNativeDriver: true,
         },
       ),
       Animated.timing(
@@ -71,6 +72,7 @@ class FlipComponent extends Component {
           toValue,
           duration: this.props.rotateDuration,
           easing: Easing.linear,
+          useNativeDriver: true,
         },
       ),
       Animated.timing(
@@ -79,6 +81,7 @@ class FlipComponent extends Component {
           toValue: 0,
           duration: this.props.scaleDuration,
           easing: Easing.linear,
+          useNativeDriver: true,
         },
       ),
     ]).start();
